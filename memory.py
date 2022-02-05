@@ -230,6 +230,7 @@ def home():
 # Fonction pour afficher le score et temps de la partie + enregistrement dans la variable score
 def winner():
     global win_image, click_count_text, game_time_text
+    canvas.delete(move_count_text)
     win_image = canvas.create_image(screenWidth/2-128, 100, image=IMAGES_TK[6], anchor=NW)
     click_count_text = canvas.create_text(screenWidth/2+20, screenHeight/2, text="Score : "+str(click_count)+" cliques", font=('Arial', '14', 'bold'))
     game_time_text = canvas.create_text(screenWidth/2+30, screenHeight/2+50, text="Temps : "+str(game_time)+" secondes", font=('Arial', '14', 'bold'))
